@@ -38,7 +38,7 @@ A live demo is available here: [https://app.raima.com](https://app.raima.com)
 - **RaimaDB** 
   - A running instance of RaimaDB **is required** for Raima Control Center to work.  
   - Visit [https://docs.raima.com](https://docs.raima.com) for installation instructions and to get started with RaimaDB.  
-  - After setting up RaimaDB, note your IP and port so you can connect Raima Control Center to your instance.
+  - After setting up RaimaDB, use your IP and port to connect Raima Control Center to your RaimaDB.
 
 - **Node.js 20** (tested and recommended)
 
