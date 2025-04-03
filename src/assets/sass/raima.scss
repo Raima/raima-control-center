@@ -1,0 +1,1014 @@
+
+/*
+ =========================================================
+ * Vue Black Dashboard - v1.1.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/black-dashboard
+ * Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+ // Core
+
+@import "black-dashboard/custom/functions";
+@import "black-dashboard/bootstrap/functions";
+
+// @import "black-dashboard/custom/variables";
+// @import "black-dashboard/bootstrap/variables";
+@import "raima/custom/variables";
+@import "raima/bootstrap/variables";
+@import "raima/variables.scss";
+
+@import "black-dashboard/custom/mixins";
+@import "black-dashboard/bootstrap/mixins";
+
+ // Bootstrap components
+
+@import "black-dashboard/bootstrap/root";
+@import "black-dashboard/bootstrap/reboot";
+@import "black-dashboard/bootstrap/type";
+@import "black-dashboard/bootstrap/images";
+@import "black-dashboard/bootstrap/code";
+@import "black-dashboard/bootstrap/grid";
+@import "black-dashboard/bootstrap/tables";
+@import "black-dashboard/bootstrap/forms";
+@import "raima/bootstrap/forms";
+@import "black-dashboard/bootstrap/buttons";
+@import "black-dashboard/bootstrap/transitions";
+@import "black-dashboard/bootstrap/dropdown";
+@import "black-dashboard/bootstrap/button-group";
+@import "black-dashboard/bootstrap/input-group";
+@import "black-dashboard/bootstrap/custom-forms";
+@import "black-dashboard/bootstrap/nav";
+@import "black-dashboard/bootstrap/navbar";
+@import "black-dashboard/bootstrap/card";
+@import "black-dashboard/bootstrap/breadcrumb";
+@import "black-dashboard/bootstrap/pagination";
+@import "black-dashboard/bootstrap/badge";
+@import "black-dashboard/bootstrap/jumbotron";
+@import "black-dashboard/bootstrap/alert";
+@import "black-dashboard/bootstrap/progress";
+@import "black-dashboard/bootstrap/media";
+@import "black-dashboard/bootstrap/list-group";
+@import "black-dashboard/bootstrap/close";
+@import "black-dashboard/bootstrap/modal";
+// customize for raima
+@import "raima/bootstrap/modal";
+@import "black-dashboard/bootstrap/tooltip";
+@import "black-dashboard/bootstrap/popover";
+@import "black-dashboard/bootstrap/carousel";
+@import "black-dashboard/bootstrap/utilities";
+@import "black-dashboard/bootstrap/print";
+
+ // Custom components
+
+ @import "black-dashboard/custom/alerts.scss";
+ @import "black-dashboard/custom/buttons.scss";
+ @import "black-dashboard/custom/dropdown.scss";
+ @import "black-dashboard/custom/footer.scss";
+ @import "black-dashboard/custom/forms.scss";
+ @import "black-dashboard/custom/images.scss";
+ @import "black-dashboard/custom/modal.scss";
+ @import "black-dashboard/custom/navbar.scss";
+ @import "raima/custom/navbar.scss";
+ @import "black-dashboard/custom/type.scss";
+ @import "black-dashboard/custom/tables";
+ @import "black-dashboard/custom/checkboxes-radio";
+ @import "black-dashboard/custom/fixed-plugin";
+ // @import "black-dashboard/custom/sidebar-and-main-panel.scss";
+ @import "raima/custom/sidebar-and-main-panel.scss";
+ @import "black-dashboard/custom/misc.scss";
+ @import "black-dashboard/custom/rtl.scss";
+ @import "black-dashboard/custom/input-group.scss";
+
+
+ // Vendor / Plugins
+
+@import "black-dashboard/custom/vendor/plugin-perfect-scrollbar.scss";
+@import "black-dashboard/custom/vendor/plugin-animate-bootstrap-notify.scss";
+
+// light mode
+
+@import "black-dashboard/custom/white-content.scss";
+@import "raima/custom/white-content.scss";
+
+// Cards
+
+@import 'black-dashboard/custom/card';
+@import "black-dashboard/custom/cards/card-chart";
+@import "black-dashboard/custom/cards/card-map";
+@import "black-dashboard/custom/cards/card-user";
+@import "black-dashboard/custom/cards/card-task";
+@import "black-dashboard/custom/cards/card-plain";
+
+@import "pages/login.scss";
+@import "pages/tableview.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+html,
+body,
+.app-container {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 70vh;
+}
+
+
+body,
+.app-container {
+  background: #1a232a;
+}
+
+
+
+/* OVERRIDES */
+/* START:BUTTONS */
+/* START:INPUTS */
+.port-input input {
+  letter-spacing: 10px;
+}
+/* END:INPUTS */
+
+/* start:switcher */
+.mode-switcher-container {
+  height: 43px;
+  max-width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (min-width: 992px) {
+    margin-right: 60px;
+  }
+
+  &:after {
+    display: none;
+    @media (min-width: 992px) {
+        display: block;
+        content: '';
+        border: 1px solid #E4E4E4;
+        height: 23px;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+  }
+
+
+
+  .switcher {
+    margin-left: 10px;
+    margin-righT: 10px;
+    display: flex;
+    align-items: center;
+
+    input[type=checkbox]{
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+
+    label {
+      cursor: pointer;
+      text-indent: -9999px;
+      color: transparent;
+      font-size: 0;
+      width: 36px;
+      height: 20px;
+      background: #C7C7C7;
+      display: block;
+      border-radius: 20px;
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    label:after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    input:checked + label {
+      background: #0098f0;
+    }
+
+    input:checked + label:after {
+      left: calc(100% - 3px);
+      transform: translateX(-100%);
+    }
+
+    label:active:after {
+      width: 41px;
+    }
+  }
+}
+
+/* end:switcher */
+/* start:sidebardashboard */
+.sidebar-dashboard {
+  padding: 22px 23px;
+  height: 100%;
+  width: 100%;
+  //
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .img-holder {
+    width: 100%;
+    background-color: $gray-0;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(/assets/placeholders/sidebar_placeholder.png);
+  }
+
+  .divider{
+    content: '';
+    display: block;
+    background-color: $gray-0;
+    height: 1px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .version-info-container {
+
+    p {
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0.4px;
+      margin-bottom: 20px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+/* end sidebardashboard */
+
+/* START:HOMEDASHBOARD */
+.dashboard {
+  // min-height: calc(100vh - 104px);
+  display: flex;
+  flex-direction: column;
+
+  .disk-usage {
+
+    &.card {
+      overflow: hidden;
+      height: 310px;
+    }
+
+    .content-holder {
+      /* Grayscale / Gray 05 */
+     // display: flex;
+      box-sizing: content-box;
+      //flex-direction: column;
+      //justify-content: center;
+      //height: 100%;
+      //padding: 0 20px;
+      //border: 1px solid lighten( $black , 5%);
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      .disk-usage-label {
+        display: inline-block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #A1A1A1 !important;
+      }
+
+      .disk-usage {
+        font-weight: 500;
+        display: inline-block;
+        padding-left: 10px;
+        //font-size: 56px;
+        margin-bottom:0;
+      }
+    }
+  }
+
+  .users-card {
+    height: 310px;
+
+    .list-group {
+      height: 100%;
+      overflow: auto;
+    }
+
+    .card-body {
+      padding-right: 10px;
+      color: $gray-80;
+      max-height: 100%;
+      overflow: auto;
+    }
+
+    .list-group-item{
+      padding: 0;
+      padding-right: 10px;
+      line-height: 36px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .username {
+        font-weight: 700;
+      }
+
+      .userrole {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .databases-card {
+    overflow: hidden;
+
+    .list-group-item {
+        background-color: #34374C;
+        border: 1px solid #34374C;
+        border-radius: 4px;
+        color: white;
+    }
+
+    .list-group-item-action:hover, .list-group-item-action:focus {
+      color: white;
+      background-color: #253e5f;
+      border: 1px solid #253e5f;
+    }
+  }
+
+  .card-tasks {
+    overflow: hidden;
+
+    .card-body {
+      overflow-y: auto;
+    }
+
+    .table {
+      table-layout: fixed;
+      overflow: auto;
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.page-container {
+  // height: calc(100vh - 104px);
+}
+
+.no-databases,
+.no-databases-with-error,{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .main-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+}
+/* END:HOMEDASHBAORD */
+// modal overwrite
+.modal.show .modal-dialog {
+  -webkit-transform: translate(0,0) !important;
+  transform: translate(0,0%) !important;
+}
+
+#logout-btn{
+  color:#0098f0d6;
+}
+
+#edit-btn, #delete-btn{
+  color: #0098f0a1;
+}
+
+#edit-btn:hover, #delete-btn:hover, #logout-btn:hover{
+  color: #0098f0 !important;
+}
+
+#edit-row-form .form-control,
+#insert-row-form .form-control{
+  border-color: #0098f084;
+}
+
+#edit-row-form .form-control:focus,
+#insert-row-form .form-control:focus{
+  border-color: #0098f0;
+}
+
+
+#navigation-items {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  list-style-type: none;
+  background-color: transparent !important;
+
+  .icon-wrapper{
+    display: inline;
+    padding-right: 5px;
+  }
+
+  li {
+    margin: 18px 0;
+  }
+
+  li:first-child {
+    margin-top:0;
+  }
+
+  a{
+    font-size: 16px;
+    transition: .1s;
+    color:rgba(255, 255, 255, 0.8);
+  }
+
+  a:hover{
+    color: #0098f0;
+  }
+}
+
+.sidebar-footer{
+  position: absolute;
+  bottom: 10px;
+  padding-bottom: 22px;
+  padding-right: 23px;
+}
+
+.error-text{
+  font-weight: bolder;
+  display: inline;
+}
+
+#search-databases-input-container .tim-icons{
+  color: #0098f0a1;
+}
+
+#search-databases-input-container .input-group-text{
+  border-top: 1px solid #8f909a;
+  border-bottom: 1px solid #8f909a;
+  border-left: 1px solid #8f909a;
+}
+#search-databases-input{
+  border-top: 1px solid #8f909a;
+  border-bottom: 1px solid #8f909a;
+  border-right: 1px solid #8f909a;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.no-content-holder, #search-databases-input::placeholder {
+  color: #A1A1A1;
+}
+
+.tabs-container{
+  .v-tabs-bar{
+    height: 28px !important;
+    background-color: transparent !important;
+    color: white;
+  }//
+  .v-tab:not(.v-tab--active){
+    color: #A1A1A1 !important;
+  }
+  .v-slide-group__prev, .v-slide-group__next{
+    i{
+      color: white !important;
+    }
+  }
+  .v-slide-group__content{
+    justify-content: center;
+  }
+}
+
+.custom-search::before{
+  display: none;
+}
+
+.custom-select {
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: background-color 0.00000001s ease;
+  background-color: #27293d !important;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-success{
+  color: #0098f0a1 !important;
+}
+
+.color-marker-chip{
+  margin-left: 15px;
+  border-radius: 0px !important;
+  height: 6px !important;
+}
+
+.databases-card {
+  .card-header-container{
+    flex-direction: column !important;
+    #search-databases-input-container{
+      padding-left: 0px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .pagination-wrapper{
+    flex-direction: column;
+    .current-state{
+      flex-direction: column;
+      .show-rows{
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+        margin-left: 0px !important;
+      }
+    }
+    #pagination{
+      display: contents;
+    }
+  }
+
+  .options-card{
+    margin-top: 30px;
+  }
+  .databases-card {
+    .card-header-container{
+      display: block !important;
+    }
+    #search-databases-input-container{
+      padding-left: 0px !important;
+    }
+  }
+
+  .tableview-header{
+    display: block !important;
+    .control-section{
+      display: block !important;
+      .custom-search{
+        margin-top: 20px;
+        margin-left: 0px !important;
+      }
+      .custom-search::before{
+        width: unset !important;
+        border-left: 0px !important;
+      }
+    }
+  }
+
+}
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #858585;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}
+
+
+/* RAIMA UI - CSS OVERWRITES */
+
+.main-panel {
+  background: $raima-bg;
+  border-top: none !important;
+}
+
+.sidebar-wrapper,
+.card,
+.v-component .tableview-dark-mode tbody > tr > td:last-child:not(.no-result-cell),
+.v-component .tableview-dark-mode thead > tr > th {
+  background: $raima-dark !important;
+}
+
+.v-component .tableview-dark-mode tbody > tr > td:last-child:not(.no-result-cell) {
+  background: transparent !important;
+}
+
+.v-component .tableview-dark-mode tbody tr:hover td:not(.no-result-cell) {
+  background-color: $raima-red !important;
+}
+
+.v-component .tableview-dark-mode tbody tr:hover td:not(.no-result-cell) .tim-icons {
+  color: #ffffff !important;
+}
+
+
+.v-component .tableview-dark-mode tbody > tr:hover > td:last-child {
+  background: $raima-red !important;
+}
+
+.tim-icons,
+.information-dark-mode .information-wrapper .v-icon {
+  color: $raima-red !important;
+}
+
+.pagination-dark-mode .v-pagination__item--active,
+.pagination-dark-mode .v-pagination__item:hover {
+  background: $raima-red !important;
+}
+
+.v-component .v-icon.v-icon:hover {
+  color: $raima-red !important;
+}
+.btn-primary:not(.btn-search):not(.btn-link) {
+  background: $raima-red;
+}
+
+.btn-primary:not(.btn-search):not(.btn-link) .tim-icons {
+  color: white !important;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: linear-gradient(to bottom left, $raima-red, $raima-light-red, $raima-light-red) !important;
+}
+
+.modal-footer {
+  .btn-primary.btn-simple,
+  .btn-primary.btn-simple:active,
+  .btn-primary.btn-simple:focus,
+  .btn-primary.btn-simple:active,
+  .btn-primary.btn-simple:not(:disabled):not(.disabled):active {
+    color: #ffffff !important;
+    background: $raima-db !important;
+    border-color:$raima-db !important;
+  }
+}
+
+#edit-row-form {
+  .btn-primary:not(.btn-simple) {
+    background: $raima-red !important;
+    border-color:$raima-red !important;
+    color: #ffffff !important;
+  }
+}
+#edit-row-form {
+  .btn-primary.btn-simple,
+  .btn-primary.btn-simple:active,
+  .btn-primary.btn-simple:focus,
+  .btn-primary.btn-simple:active,
+  .btn-primary.btn-simple:not(:disabled):not(.disabled):active,
+  .btn-primary {
+    background: $raima-db !important;
+    border-color: $raima-db !important;
+    color: #ffffff !important;
+  }
+  .btn-primary.btn-simple:hover {
+    background: $raima-red !important;
+  }
+}
+
+.btn-primary.btn-simple:hover {
+  background: $raima-red !important;
+}
+
+.v-component .tableview-dark-mode tbody > tr:hover > td {
+  cursor: pointer;
+}
+
+.custom-select {
+  background-color: $raima-dark !important;
+}
+
+#logout-btn {
+  color: #ffffff !important;
+  &:hover {
+    color: $raima-red !important;
+  }
+}
+
+.mode-switcher-container .switcher input:checked + label {
+  background: $raima-red !important;
+}
+
+.nav-item:hover a p,
+.nav-item.active a p,
+#navigation-items li:hover a,
+#navigation-items li.active a {
+  color: $raima-red !important;
+}
+
+.sidebar .nav li.active > a:not([data-toggle=collapse]):before,
+.off-canvas-sidebar .nav li.active > a:not([data-toggle=collapse]):before {
+  background: $raima-red !important;
+}
+
+.btn-primary .tim-icons {
+  color: $raima-red !important;
+}
+
+.sidebar {
+  background: $raima-dark;
+  box-shadow: none !important;
+}
+
+.dashboard .databases-card .list-group-item {
+  background: $raima-db;
+  border-color: $raima-db;
+}
+
+.dashboard .databases-card .list-group-item-action:hover,
+.dashboard .databases-card .list-group-item-action:focus,
+.options-dark-mode tbody tr:hover,
+.sidebar .logo:after,
+.off-canvas-sidebar .logo:after {
+  background: $raima-red !important;
+}
+
+.v-component .theme--light.v-data-table.v-data-table--fixed-header thead th {
+  background: $raima-dark !important;
+}
+
+.logo a:hover {
+  color: $raima-red !important;
+}
+
+#edit-row-form .form-control,
+#insert-row-form .form-control {
+  border-color: #ffffff;
+}
+
+#edit-row-form .form-control:focus,
+#insert-row-form .form-control:focus {
+  border-color: #ffffff;
+}
+
+
+.white-content {
+  .sidebar-wrapper, .card, .v-component .tableview-dark-mode tbody > tr > td:last-child:not(.no-result-cell), .v-component .tableview-dark-mode thead > tr > th {
+    background: #ffffff !important;
+  }
+  .v-component .theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+    background: #ffffff !important;
+  }
+  .v-component .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) td {
+    background: $raima-red !important;
+    color: #ffffff !important;
+  }
+  .dashboard .databases-card .list-group-item-action:hover, .dashboard .databases-card .list-group-item-action:focus, .options-dark-mode tbody tr:hover, .sidebar .logo:after, .off-canvas-sidebar .logo:after {
+    color: #ffffff !important;
+  }
+  #logout-btn {
+    color: #1d253b !important;
+    &:hover {
+      color: $raima-red !important;
+    }
+  }
+  .tim-icons {
+    color: $raima-red !important;
+  }
+  .v-component tbody tr:hover td:not(.no-result-cell) .tim-icons {
+    color: #ffffff !important;
+  }
+  .v-component .theme--light.v-pagination .v-pagination__item--active,
+  .v-component .theme--light.v-pagination .v-pagination__item:hover {
+    background: $raima-red !important;
+    color: #ffffff !important;
+  }
+}
+
+#go-to-page-btn {
+  background: $raima-red !important;
+}
+
+.information-white-mode .information-wrapper .v-icon {
+  color: $raima-red !important;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card .card-header .card-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700 !important;
+}
+
+button {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+#create-row {
+  .btn-primary.btn-simple,
+  .btn-primary.btn-simple:active,
+  .btn-primary.btn-simple:focus,
+  .btn-primary.btn-simple:active,
+  .btn-primary.btn-simple:not(:disabled):not(.disabled):active,
+  .btn-primary {
+    background: $raima-db !important;
+    border-color: $raima-db !important;
+    color: #ffffff !important;
+  }
+  .btn-primary.btn-simple:hover {
+    background: $raima-red !important;
+  }
+  .btn-primary:not(.btn-simple) {
+    background: $raima-red !important;
+    border-color:$raima-red !important;
+    color: #ffffff !important;
+  }
+}
+
+
+#insert-btn {
+  background: $raima-red !important;
+  border-color: $raima-red !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.btn-primary.active:focus,
+.btn-primary.active:hover {
+  background: linear-gradient(to bottom left, $raima-red, $raima-light-red, $raima-light-red) !important;
+}
+
+.btn.btn-primary.btn-link {
+  background: transparent !important;
+}
+
+.custom-select {
+  background: url('../../assets/icons/sort-solid.svg') no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  background-size: 8px;
+  -moz-appearance:none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+
+.v-treeview-node__root {
+  color: #ffffff !important;
+  .v-icon.v-icon.v-icon--link {
+    color: #ffffff !important;
+  }
+}
+
+#search-databases-input-container .input-group-prepend {
+  height: 38px !important;
+}
+
+
+.sidebar-dashboard{
+  height: calc(100% - 200px);
+  overflow-y: scroll;
+}
+
+.app-navigation {
+  text-transform: uppercase;
+  .v-treeview-node__root {
+    flex-direction: row-reverse;
+  }
+  .v-treeview-node__level {
+    width: 0;
+  }
+  .v-treeview-node__children {
+    margin-left: 20px;
+  }
+  .hover-item {
+    cursor: pointer;
+    &:hover {
+      color: $raima-red;
+    }
+  }
+}
+.main-panel > .content{
+  min-height: calc(100vh - 111px);
+  max-height: calc(100vh - 30px);
+}
+.tableview{
+  min-height: calc(100vh - 111px);
+  max-height: calc(100vh - 30px);
+
+}
+
+.tableview > .card {
+  min-height: calc(100vh - 113px);
+}
+
+.tableview .theme--light.v-tabs>.v-tabs-bar,
+.tableview .theme--light.v-tabs-items {
+  background-color: transparent;
+}
+
+
+.tableview .v-tabs--grow>.v-tabs-bar .v-tab,
+.tableview .theme--light.v-tabs>.v-tabs-bar .v-tab--disabled, .theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active), .theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-btn, .theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-icon{
+  color: #fff;
+}
+
+
+.v-treeview-node__label a.active {
+  color: $raima-red !important;
+}
+
+
+.v-treeview-node__label a {
+  display:block;
+  float:left;
+  width: 100%;
+}
+
+
+.v-progress-circular {
+  margin-top: 30px;
+  color: $raima-red
+}
+
+.sidebar-wrapper {
+
+  .sidebar-footer {
+    padding-left: 23px;
+  }
+
+  .divider{
+    content: '';
+    display: block;
+    background-color: $gray-0;
+    height: 1px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .version-info-container {
+
+    p {
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0.4px;
+      margin-bottom: 20px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.tableview .v-component .v-input--selection-controls__input .v-icon {
+  color: #da465c !important;
+}
+
+.tableview .v-component .sorting-selector .v-input--selection-controls__input .v-icon {
+  font-size: 18px !important;
+}
+
+.tableview .v-component .v-input--selection-controls .v-radio > .v-label  {
+  color: #ffffff !important;
+  font-size: 14px;
+  margin: 0px 0 0 5px;
+}
+
+.tableview .tim-icons {
+  margin-top: -10px !important;
+}
+
+
+.tableview .card > .card-body {
+  padding-left: 0;
+}

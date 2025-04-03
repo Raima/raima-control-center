@@ -1,0 +1,31 @@
+#data-visualization {
+  #chart {
+    width: 100%;
+    text {
+      fill: #ffffff !important;
+    }
+  }
+
+  .list {
+    margin: 0px 22px 20px 22px;
+    list-style:none;
+    li {
+      padding: 0 23px;
+      margin-top: 22px;
+      margin-bottom: 11px;
+      font-weight: 600;
+      &.selected {
+        color: #da465c;
+      }
+      &:hover {
+        cursor: pointer;
+        color: #da465c;
+      }
+    }
+  }
+
+}
+
+.map-container > div {
+  height: calc(100vh - 140px) !important;
+}

@@ -1,0 +1,6 @@
+.is-invalid {
+  .form-control {
+    border: 2px solid $danger-states;
+  }
+}
+

@@ -1,0 +1,128 @@
+@import "../raima/variables.scss";
+.login-container {
+  height:100%;
+
+  .login-img-holder {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    // background-image: url('/assets/placeholders/loginSectionRightPlaceholder.svg');
+    background-image: url('/assets/AutomotivewithEmbeddedDatabase.jpg');
+  }
+
+  .login-flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: $raima-dark;
+    overflow: auto;
+  }
+
+  /*
+  .login-scroll-container {
+    max-height: 100vh;
+    overflow: auto;
+  }
+  */
+
+  .login-form-wrapper {
+    position: relative;
+    margin-left: 60px;
+    margin-right: 60px;
+    max-width: 450px;
+
+    .form-control {
+      color: #ffffff !important;
+      border: thin solid rgba(255, 255, 255, 0.12);
+    }
+    p {
+      color: #ffffff !important;
+    }
+
+    @media screen and (min-width: 1600px) {
+        max-width: 650px;
+    }
+
+    .brand-logo {
+      max-width: 150px;
+      position: absolute;
+      top: -75px;
+      border-radius: 0 !important;
+    }
+  }
+
+  h1.raima-theme-title {
+    margin:20px 0;
+    /* H500 */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+    /* identical to box height, or 150% */
+
+  }
+
+  a.red-link {
+    color: $raima-red !important;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .divider {
+    margin: 28px 0;
+    border: 1px solid #F1F1F1;
+    transform: rotate(-0.13deg);
+  }
+
+  label {
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+
+  .text-divider {
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+
+    & > div {
+      flex-basis: auto;
+      min-width: 10%;
+    }
+
+
+    & > div:nth-child(1),
+    & > div:nth-child(3) {
+      border: 1px solid #F1F1F1;
+      content: "";
+      flex-grow: 1;
+    }
+
+    & > div:nth-child(2) {
+      text-align: center;
+      padding: 0px 20px;
+    }
+  }
+
+  .btn-primary:not(.btn-simple) {
+    background: $raima-red !important;
+    border-color:$raima-red !important;
+    color: #ffffff !important;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active,
+  .btn-primary:active:focus,
+  .btn-primary:active:hover,
+  .btn-primary.active:focus,
+  .btn-primary.active:hover {
+    background: linear-gradient(to bottom left, $raima-red, $raima-light-red, $raima-light-red) !important;
+  }
+}

@@ -1,0 +1,344 @@
+@import "./variables.scss";
+@import "../../raima/variables.scss";
+
+
+.white-content{
+
+  body, .app-container {
+    background: #ffffff !important;
+  }
+  .is-invalid {
+    .form-control {
+      border: 2px solid $danger-states;
+    }
+  }
+  p.is-invalid {
+    color: $danger-states;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .sidebar,
+  .off-canvas-sidebar {
+    background: $card-bg;
+  }
+
+  .sidebar{
+    .logo{
+      a.back-url {
+        color: $dark-gray !important;
+      }
+      &::after{
+        background: $dark-gray !important;
+      }
+    }
+
+
+    .selected-database,
+    .selected-table {
+      color: $dark-gray;
+    }
+
+    .nav .nav-item{
+      &.active a{
+        color: $dark-gray;
+
+        &:hover::before {
+          background: $dark-1;
+        }
+
+        &:hover {
+          p {
+            color: $dark-1 !important;
+          }
+        }
+
+        &::before {
+          background-color: $dark-gray;
+        }
+        p {
+          color: $dark-gray;
+        }
+      }
+      a {
+        color: $dark-gray;
+      }
+    }
+
+    p{
+      color: $dark-gray;
+    }
+  }
+
+  .dashboard {
+    .disk-usage {
+      .content-holder {
+        border-color: $gray-0;
+      }
+    }
+
+    .databases-card {
+
+      .list-group-item {
+          background-color: #f4f5f7 !important;
+          border: 1px solid rgb(233, 236, 239) !important;
+          color: #525f7f !important;
+          margin-bottom: 20px;
+      }
+
+      .list-group-item-action:hover, .list-group-item-action:focus {
+        background-color: $raima-red !important;
+        color: #525f7f !important;
+        border: 1px solid rgb(233, 236, 239) !important;
+      }
+    }
+  }
+
+  .sidebar .nav li:hover:not(.active) > a p, .sidebar .nav li:hover:not(.active) > a i, .sidebar .nav li:focus:not(.active) > a p, .sidebar .nav li:focus:not(.active) > a i, .off-canvas-sidebar .nav li:hover:not(.active) > a p, .off-canvas-sidebar .nav li:hover:not(.active) > a i, .off-canvas-sidebar .nav li:focus:not(.active) > a p, .off-canvas-sidebar .nav li:focus:not(.active) > a i {
+    color: $dark-1;
+  }
+
+
+
+  #dataTable_wrapper {
+    .pagination {
+
+    }
+  }
+
+  .page-link {
+    color: $dark-gray
+  }
+
+  /* START:DATATABLE VIEW */
+  .tableview-header {
+    .control-section {
+      .custom-search {
+        .input-group-prepend {
+          .custom-select {
+            color: #1d253b;
+            //background: white;
+          }
+        }
+        .btn-search {
+          color:#194b7d;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  /* END:DATATABLE VIEW */
+
+  #edit-btn, #delete-btn, #logout-btn{
+    color: #194b7d;
+  }
+
+  #edit-btn:hover, #delete-btn:hover, #logout-btn:hover{
+    color: #0098f0 !important;
+  }
+
+  #edit-row-form .form-control,
+  #insert-row-form .form-control{
+    border-color: #2b3553;
+  }
+
+  #navigation-items {
+    a{
+      color:#1d253b !important;
+    }
+
+    a:hover{
+      color: #0098f0;
+    }
+  }
+
+  #search-databases-input-container .tim-icons{
+    color: $raima-red !important;
+  }
+
+  .tabs-container{
+    .v-tabs-bar{
+      height: 28px !important;
+      background-color: transparent !important;
+      color: #1d253b;
+    }//
+    .v-tab:not(.v-tab--active){
+      color: #A1A1A1 !important;
+    }
+    .v-slide-group__prev, .v-slide-group__next{
+      i{
+        color: #1d253b !important;
+      }
+    }
+    .v-slide-group__content{
+      justify-content: center;
+    }
+  }
+
+  .text-success{
+    color: #194b7d !important;
+  }
+
+  .custom-select {
+    background-color: transparent !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+  }
+
+  #syntax-tab .v-tab {
+    border-color: #ffffff !important;
+  }
+
+  #syntax-tab .v-tab.v-tab--active {
+    background: $raima-red !important;
+    color: #ffffff !important;
+  }
+
+  #syntax-tab .v-tab:hover {
+    background: $raima-red !important;
+    color: #ffffff !important;
+  }
+
+  .sidebar-sql .selected-database,
+  .sidebar-sql .selected-table{
+    color: #1d253b !important;
+  }
+
+  #sql-editor .sql-tab-container,
+  #sql-editor .sql-button-container {
+    background: #f4f5f7 !important;
+  }
+
+  #sql-editor .fas.fa-plus-square {
+    color: #1d253b !important;
+  }
+
+  #sql-editor .v-tab.v-tab--active .fas.fa-plus-square {
+    color: #ffffff !important;
+  }
+
+
+  .tableview .v-component .v-input--selection-controls .v-radio > .v-label {
+    color: #1d253b !important;
+  }
+
+  .v-component #data-table tbody > tr > td:last-child {
+    background: transparent !important;
+  }
+
+  .tableview .page-selector.v-tabs .v-tab.v-tab--active {
+    color: #ffffff;
+  }
+
+  .tableview .page-selector.v-tabs .v-tab {
+    background: white !important;
+  }
+
+  .tableview .page-selector.v-tabs .v-tab:hover {
+    color: #ffffff !important;
+  }
+
+  .tableview .v-tabs--grow > .v-tabs-bar .v-tab, .tableview .theme--light.v-tabs > .v-tabs-bar .v-tab--disabled, .theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active), .theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-btn, .theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-icon {
+    color: #1d253b;
+  }
+
+  .v-component #data-table tbody > tr:hover > td:last-child {
+    background: #da465c !important;
+  }
+
+  .v-tabs-slider-wrapper {
+    color: #da465c !important;
+  }
+
+  .v-treeview-node__root .v-icon.v-icon.v-icon--link,
+  .v-treeview-node__label,
+  .v-treeview-node__label a {
+    color: #1d253b !important;
+  }
+  #syntax-tab {
+    .v-tabs {
+      height: 36px !important;
+    }
+    .v-tab {
+      background: white !important;
+      color: rgba(0, 0, 0, 0.87) !important;
+    }
+    .v-card__text {
+      background: white !important;
+    }
+    .el-collapse-item__header {
+      color: rgba(0, 0, 0, 0.87) !important;
+    }
+    .sub-headers {
+      color: rgba(0, 0, 0, 0.87) !important;
+    }
+    .v-btn__content i {
+      color: rgba(0, 0, 0, 0.87) !important;
+    }
+  }
+  .sql-card .v-card__text {
+    background: white !important;
+  }
+  #sql-editor .v-tab {
+    background: white !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+    border-color: rgba(0, 0, 0, 0.87) !important;
+  }
+
+  #sql-editor .v-btn__content i,
+  #sql-editor .fas.fa-plus-square,
+  #sql-editor .v-slide-group__prev i, #sql-editor .v-slide-group__next i {
+    color: rgba(0, 0, 0, 0.87) !important;
+  }
+  #sql-editor .v-slide-group__prev.v-slide-group__prev--disabled i, #sql-editor .v-slide-group__next.v-slide-group__next--disabled i {
+    color: #9A9A9A !important;
+  }
+
+  #sql-query-tabs .v-tab.v-tab--active,
+  #syntax-tab .v-tab.v-tab--active{
+    background: #ffffff !important;
+    color: #1d253b !important;
+  }
+
+  #sql-query-tabs .v-tab,
+  #syntax-tab .v-tab{
+    background: #f4f5f7 !important;
+    border-color: #ffffff !important;
+  }
+
+  #sql-editor .v-tab.v-tab--active .fas.fa-plus-square {
+    color: #1d253b !important;
+  }
+
+  .syntax-toggle {
+    p {
+      color: #ffffff !important;
+    }
+  }
+
+  #delete-modal {
+    .modal-content {
+      background: #ffffff;
+      color: rgba(0, 0, 0, 0.87) !important;
+    }
+  }
+
+  #data-visualization #chart text {
+    fill: #1d253b !important;
+  }
+
+
+  .cm-s-panda-syntax, .cm-s-panda-syntax .CodeMirror-gutters {
+    background: #ffffff !important;
+  }
+
+  .CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
+    color: #1d253b !important;
+  }
+
+  .cm-s-panda-syntax .cm-operator {
+    color: #1d253b !important;
+  }
+
+}
+
+
