@@ -47,16 +47,20 @@ A live demo is available here: [https://app.raima.com](https://app.raima.com)
 1. **Clone the Repository**  
    ```bash
    git clone https://github.com/Raima/raima-control-center.git
+   ```
 2. **Install Dependencies**  
    ```bash
    cd raima-control-center
    npm install
+   ```
 3. **Run the Application**  
     ```bash
    npm run dev
+   ```
 4. **Build for Production**
     ```bash
     npm run build
+    ```
 ## Contributing
 
 Contributions are welcome!
@@ -69,6 +73,6 @@ We use GitHub Issues for tracking bugs and feature requests.
 * Include relevant logs, screenshots, or error messages.
 
 ## Support or Contact
-Please choose the approåeriate channel for support
+Please choose the appropriate channel for support
 * For general questions about RaimaDB, please email [support@raima.com](mailto:support@raima.com).
 * For issues specific to Raima Control Center, please open a [GitHub Issue](https://github.com/Raima/raima-control-center/issues).
